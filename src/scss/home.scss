@@ -1,0 +1,154 @@
+.card {
+		flex: 0 1 470px;
+		background: linear-gradient(0deg,rgba(34, 193, 195, 1) 0%, rgba(133, 190, 128, 1) 81%);
+		margin: 0px 15px;
+		padding: 40px 20px;
+		min-height: 230px;
+		text-align: center;
+		color: #fff;
+		border-radius: 20px;
+		transition: all 0.3s ease 0s;
+		height: 230px;
+		// .card__title
+
+		&__title {
+			font-size: 32px;
+			font-weight: 600;
+			margin-bottom: 15px;
+		}
+
+		// .card__date
+
+		&__date {
+			display: flex;
+			justify-content: center;
+			gap: 10px;
+			font-size: 20px;
+			margin-bottom: 15px;
+		}
+
+		// .card__search
+
+		&__search {
+			display: flex;
+			column-gap: 10px;
+			align-items: center;
+			width: 100%;
+			margin-bottom: 25px;
+		}
+
+		// .card__input
+
+		&__input {
+			color: #555;
+			padding: 10px 25px;
+			border-radius: 30px;
+			width: 100%;
+			background-color: #fff;
+			height: 60px;
+		}
+
+		// .card__btn
+
+		&__btn {
+			color: #555;
+			border-radius: 50px;
+			width: 60px;
+			height: 60px;
+			flex: 0 0 60px;
+			cursor: pointer;
+			background: #fff;
+			@media (any-hover: hover){
+				&:hover{
+					transition: all 0.3s ease 0s;
+					transform: scale(1.05);
+				}
+			}
+		}
+
+		// .card__weather
+
+		&__weather {
+			transform: scale(0);
+			opacity: 0;
+		}
+
+		// .card__title--city
+
+		&__title--city {
+			font-size: 70px;
+			font-weight: 400;
+		}
+
+		// .card__block
+
+		&__block {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			column-gap: 15px;
+			margin-bottom: 20px;
+			img{
+				width: 100px;
+				height: 100px;
+				object-fit: cover;
+			}
+		}
+
+		// .card__title--temp
+
+		&__title--temp {
+			font-size: 70px;
+			font-weight: 500;
+		}
+
+		// .card__weather-icon
+
+		&__weather-icon {
+		}
+
+		// .card__details
+
+		&__details {
+			transform: scale(0);
+			opacity: 0;
+			padding: 0 20px;
+			max-width: 250px;
+			margin: 0 auto;
+		}
+
+		// .card__col
+
+		&__col {
+			display: grid;
+			grid-template-columns: 20px 50px auto;
+			align-items: center;
+			text-align: left;
+			column-gap: 16px;
+			&:not(:last-child){
+				margin-bottom: 20px;
+			}
+		}
+
+		// .card__info
+
+		&__info {
+			border-left: 1px solid #fff;
+			padding-left: 16px;
+		}
+}
+.card.active .card__weather{
+	animation: show 0.5s forwards;
+	animation-delay: 0.5s;
+}
+
+.card.active .card__details{
+	animation: show 0.5s forwards;
+	animation-delay: 0.7s;
+}
+@keyframes show{
+	to {
+		transform: scale(1); 
+		opacity: 1;
+	}
+}
