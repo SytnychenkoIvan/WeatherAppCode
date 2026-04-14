@@ -21,7 +21,7 @@ jobs:
         run: npm i # Установка gulp и плагинов из package.json
 
       - name: Build project
-        run: npm run dev # Команда сборки в package.json (например, gulp)
+        run: npm run build # Команда сборки в package.json (например, gulp)
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
