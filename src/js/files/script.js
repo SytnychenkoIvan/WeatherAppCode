@@ -38,7 +38,7 @@ async function getWeather(city) {
 		console.log(result);
 
 		card.classList.add('active')
-		card.style.height = '530px'
+		card.style.height = 'auto'
 
 		const iconUrl = `https://openweathermap.org/img/wn/${result.weather[0].icon}@4x.png`
 
